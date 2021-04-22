@@ -1,0 +1,187 @@
+.preview {
+  min-height: 860px;
+  background-image: url('/image/houseonthemountain.jpg');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: top;
+
+  @media (max-width: $mobile-width-only) {
+    min-height: 433px;
+    background-image: none;
+  }
+
+  @media (min-width: $tablet-width)
+    and (max-width: $tablet-width-only) {
+      min-height: 344px;
+      background-image: url('/image/main-background-tablet.jpg');
+  }
+}
+
+.preview__wrapper {
+  box-sizing: border-box;
+  max-width: 1210px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (max-width: $mobile-width-only) {
+    padding: 0;
+    max-width: 767px;
+    margin: 0;
+  }
+
+  @media (min-width: $tablet-width)
+  and (max-width: $tablet-width-only) {
+    box-sizing: border-box;
+    max-width: 500px;
+    padding: 0 21px;
+  }
+}
+
+.preview__title {
+  @extend %reset-h2;
+  box-sizing: border-box;
+  padding: 185px 58px 30px 60%;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 80px;
+  color: $white;
+
+  @media (max-width: $mobile-width-only) {
+    min-height: 235px;
+    padding: 81px 10px 82px 16px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 150%;
+    text-align: center;
+    background-image: url('/image/main-background-mobile.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: $whiteOp80;
+  }
+
+  @media (min-width: $tablet-width)
+  and (max-width: $tablet-width-only) {
+    padding: 60px 0 0 0;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 150%;
+    text-align: center;
+    background-image: none;
+  }
+}
+
+.preview__text {
+  @extend %reset-p;
+  padding: 0 58px 30px 60%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 170%;
+  color: $white;
+
+  @media (max-width: $mobile-width-only) {
+    padding: 20px 16px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 170%;
+    letter-spacing: -0.466667px;
+    color: $dark;
+    text-align: center;
+  }
+
+  @media (min-width: $tablet-width)
+  and (max-width: $tablet-width-only) {
+    box-sizing: border-box;
+    padding: 15px 21px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 170%;
+    text-align: center;
+    text-align: center;
+    letter-spacing: -0.466667px;
+  }
+}
+
+.preview__link-wrapper {
+  box-sizing: border-box;
+  padding: 0 58px 30px 60%;
+
+  @media (max-width: $mobile-width-only) {
+    width: 100%;
+    padding: 0 16px;
+    margin: 0;
+  }
+
+  @media (min-width: $tablet-width)
+  and (max-width: $tablet-width-only) {
+    padding: 0;
+    text-align: center;
+  }
+}
+
+.preview__link {
+  @extend %reset-a;
+  display: block;
+  box-sizing: border-box;
+  width: 340px;
+  height: 75px;
+  padding: 30px 30px 40px 30px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $white;
+  background-color: $mainAccent;
+
+  &:hover {
+    background-color: $focusAccent;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    position: relative;
+    width: 100%;
+  }
+
+  @media (min-width: $tablet-width)
+  and (max-width: $tablet-width-only) {
+    position: relative;
+    width: 250px;
+    height: 50px;
+    margin: 0 auto;
+    padding: 19px 40px 19px 40px;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+}
+
+.preview__link-icon {
+  padding-left: 125px;
+  fill: $mainAccent;
+
+  @media (max-width: $mobile-width-only) {
+    position: absolute;
+    right: 40px;
+    padding: 0;
+  }
+
+  @media (min-width: $tablet-width)
+  and (max-width: $tablet-width-only) {
+    padding: 0;
+    position: absolute;
+    right: 40px;
+  }
+}

@@ -1,0 +1,296 @@
+.tariffs {
+  order: -1;
+  box-sizing: border-box;
+  max-width: calc(((100% / 3) * 2));
+
+  @media (max-width: $mobile-width-only) {
+    order: initial;
+    max-width: initial;
+  }
+
+  @media (min-width: $tablet-width)
+  and (max-width: $tablet-width-only) {
+    order: initial;
+    max-width: initial;
+  }
+}
+
+.tariffs__list {
+  @extend %reset-ul;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  box-sizing: border-box;
+
+  @media (max-width: $mobile-width-only) {
+  row-gap: 30px;
+  }
+
+  @media (min-width: $tablet-width)
+  and (max-width: $tablet-width-only) {
+    column-gap: 50px;
+  }
+}
+
+.tariff-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  box-sizing: border-box;
+  min-height: 672px;
+  max-width: 370px;
+  padding: 40px 30px 30px 30px;
+  background-color: $white;
+  border: 1px solid $darkOp30;
+  border-radius: 6px;
+
+  @media (max-width: $mobile-width-only) {
+    max-width: initial;
+    min-height: 614px;
+    justify-content: center;
+    padding: 30px 20px 0 20px;
+  }
+
+  @media (min-width: $tablet-width)
+  and (max-width: $tablet-width-only) {
+    justify-content: center;
+    align-content: flex-start;
+    max-width: 288px;
+    min-height: 629px;
+    padding: 30px 20px 0 20px;
+  }
+
+  &:hover {
+    border: 3px solid $mainAccent;
+
+    @media (min-width: $tablet-width)
+    and (max-width: $tablet-width-only) {
+      padding: 27px 17px 0 17px;
+    }
+  }
+}
+
+.tariffs__list {
+  @extend %reset-ul;
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: 40px;
+  }
+
+}
+
+.tariffs__item {
+  @media (min-width: $tablet-width)
+  and (max-width: $tablet-width-only) {
+    position: relative;
+  }
+}
+
+.tariff-card__title {
+  @extend %reset-h3;
+  margin-bottom: 36px;
+  align-self: baseline;
+  box-sizing: border-box;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 38px;
+  color: $darkOp70;
+
+  @media (max-width: $mobile-width-only) {
+    width: 100%;
+    margin-bottom: 0;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 34px;
+    text-align: center;
+  }
+
+  @media (min-width: $tablet-width)
+  and (max-width: $tablet-width-only) {
+    width: 100%;
+    margin-bottom: 10px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 34px;
+    text-align: center;
+  }
+}
+
+.tariff-card:hover .tariff-card__title {
+  margin-bottom: 50px;
+  line-height: 34px;
+  color: $mainAccent;
+
+  @media (max-width: $mobile-width-only) {
+  margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width)
+  and (max-width: $tablet-width-only) {
+    margin-bottom: 10px;
+  }
+}
+
+.tariff-card__price {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 34px;
+  color: $darkOp70;
+
+  @media (max-width: $mobile-width-only) {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 34px;
+  }
+
+  @media (min-width: $tablet-width)
+  and (max-width: $tablet-width-only) {
+    margin-bottom: 11px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 34px;
+  }
+}
+
+.tariff-card:hover .tariff-card__price {
+  color: $mainAccent;
+}
+
+.tariff-card__intro {
+  @extend %reset-p;
+  position: relative;
+  box-sizing: border-box;
+  padding-bottom: 28px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: $dark;
+
+  @media (max-width: $mobile-width-only) {
+    padding: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  @media (min-width: $tablet-width)
+  and (max-width: $tablet-width-only) {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $darkOp30;
+  }
+}
+
+.tariffs__item--accent .tariff-card__intro {
+  padding-bottom: 20px;
+}
+
+.tariff-card:hover .tariff-card__intro::before {
+  background-color: $mainAccent;
+}
+
+.tariff-card__advantages-list {
+  @extend %reset-ul;
+  margin-top: 30px;
+
+  @media (max-width: $mobile-width-only) {
+  margin-bottom: 80px;
+  }
+
+  @media (min-width: $tablet-width)
+  and (max-width: $tablet-width-only) {
+    margin-top: 20px;
+  }
+}
+
+.tariff-card__advanvantages-item {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 8px;
+}
+
+.tariff-card__advanvantages-text-icon {
+  padding-top: 5px;
+  width: 22px;
+  height: 22px;
+  fill: $mainAccent;
+}
+
+.tariff-card:hover .tariff-card__advanvantages-text-icon {
+  fill: $dark;
+}
+
+.tariff-card__advanvantages-text {
+  @extend %reset-p;
+  box-sizing: border-box;
+  max-width: calc(100% - 30px);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 32px;
+  color: $dark;
+
+}
+
+.tariff-card__link {
+  @extend %reset-a;
+  align-self: flex-end;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 30px 40px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $white;
+  background-color: $mainAccent;
+
+  @media (max-width: $mobile-width-only) {
+    position: absolute;
+    width: calc(100% - 34px);
+  }
+
+  @media (min-width: $tablet-width)
+  and (max-width: $tablet-width-only) {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 288px;
+    padding: 19px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    background-color: $focusAccent;
+  }
+}

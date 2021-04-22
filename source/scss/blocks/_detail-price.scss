@@ -1,0 +1,15 @@
+.detail-price {
+  max-width: 1443px;
+  margin: 0 auto;
+  background-image: url('/image/euro-map.svg');
+  background-repeat: no-repeat;
+
+  @media (max-width: $mobile-width-only) {
+    background-image: none;
+  }
+
+  @media (min-width: $tablet-width)
+  and (max-width: $tablet-width-only) {
+    background-image: none;
+  }
+}

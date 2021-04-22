@@ -1,0 +1,321 @@
+.description {
+  margin-top: 82px;
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: 40px;
+  }
+
+  @media (min-width: $tablet-width)
+  and (max-width: $tablet-width-only) {
+    margin-top: 98px;
+  }
+}
+
+.description__toggles-list {
+  @extend %reset-ul;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 99px;
+
+  @media (max-width: $mobile-width-only) {
+    justify-content: space-between;
+    column-gap: 10px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: calc(72%);
+    height: 1px;
+    background-color: $dark;
+    opacity: 0.3;
+
+    @media (max-width: $mobile-width-only) {
+      width: calc(100% + 16px);
+    }
+  }
+
+  @media (min-width: $tablet-width)
+  and (max-width: $tablet-width-only) {
+    overflow: hidden;
+    flex-wrap: nowrap;
+    column-gap: 96px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 16px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 150%;
+    text-align: center;
+  }
+}
+
+.slider__toggle-item {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+}
+
+.slider__toggle-item--show {
+  @media (max-width: $mobile-width-only) {
+    display: block;
+  }
+}
+
+.slider__toggle-item--hidden {
+  @media (min-width: $tablet-width)
+  and (max-width: $tablet-width-only) {
+    display: none;
+  }
+}
+
+.description__button {
+  @extend %reset-button;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 15px 0;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: -0.415px;
+  color: $darkOp30;
+
+  @media (max-width: $mobile-width-only) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.415px;
+    }
+
+  @media (min-width: $tablet-width)
+  and (max-width: $tablet-width-only) {
+
+  }
+
+}
+
+.slider__toggle-item--active .description__button {
+  color: $mainAccent;
+}
+
+.description__list {
+  @extend %reset-ul;
+  margin-top: 80px;
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: 24px;
+  }
+
+  @media (min-width: $tablet-width)
+  and (max-width: $tablet-width-only) {
+    margin-top: 33px;
+  }
+}
+
+.description__item {
+  display: none;
+}
+
+.slider__item--active {
+display: block;
+}
+
+.description-card {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 100px;
+  box-sizing: border-box;
+  max-width: 902px;
+  min-height: 596px;
+}
+
+.description-card__main-wrapper {
+  max-width: 41%;
+
+  @media (max-width: $mobile-width-only) {
+    max-width: initial;
+    width: 100%;
+  }
+
+  @media (min-width: $tablet-width)
+  and (max-width: $tablet-width-only) {
+    max-width: initial;
+    width: 100%;
+  }
+}
+
+.description-card__title{
+  @extend %reset-h3;
+  position: relative;
+  padding-bottom: 20px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 90px;
+  letter-spacing: -1.245px;
+  color: $dark;
+
+  @media (max-width: $mobile-width-only) {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 150%;
+    letter-spacing: initial;
+    text-align: center;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 60%;
+    height: 1px;
+    background-color: $mainAccent;
+
+    @media (max-width: $mobile-width-only) {
+      display: none;
+    }
+
+    @media (min-width: $tablet-width)
+      and (max-width: $tablet-width-only) {
+        display: none;
+      }
+    }
+
+  @media (min-width: $tablet-width)
+  and (max-width: $tablet-width-only) {
+    width: 100%;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 150%;
+    text-align: center;
+  }
+}
+
+.description-card__text {
+  margin-bottom: 50px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: -0.466667px;
+  color: $darkOp70;
+
+  @media (max-width: $mobile-width-only) {
+    margin: 0;
+    text-align: center;
+  }
+
+  @media (min-width: $tablet-width)
+  and (max-width: $tablet-width-only) {
+    margin: 0 0 20px 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: -0.466667px;
+  }
+}
+
+.description-card__img-wrapper {
+  min-width: 430px;
+  min-height: 596px;
+  background-color: $background-img;
+  @media (max-width: $mobile-width-only) {
+    min-width: initial;
+    min-height: initial;
+    width: 100%;
+    max-height: 415px;
+  }
+
+  @media (min-width: $tablet-width)
+  and (max-width: $tablet-width-only) {
+    width: 100%;
+    height: 415px;
+    min-height: initial;
+  }
+}
+
+.description-card__img {
+  display: block;
+
+  @media (max-width: $mobile-width-only) {
+    position: relative;
+    left: -16px;
+    width: calc(100% + 32px);
+    height: 100%;
+    max-height: 415px;
+  }
+
+  @media (min-width: $tablet-width)
+  and (max-width: $tablet-width-only) {
+    width: 100%;
+    height: auto;
+    min-height: 415px;
+  }
+}
+
+.description-card__link {
+  @extend %reset-a;
+  display: block;
+  box-sizing: border-box;
+  max-width: 250px;
+  padding: 30px 40px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $white;
+  background-color: $mainAccent;
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: 20px;
+    margin-bottom: 69px;
+    padding: 19px;
+    max-width: initial;
+    width: 100%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+
+  @media (min-width: $tablet-width)
+    and (max-width: $tablet-width-only) {
+      box-sizing: border-box;
+      width: 250px;
+      height: 50px;
+      margin: 0 auto 30px;
+      padding: 19px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+  }
+
+  &:hover {
+    background-color: $focusAccent;
+  }
+}

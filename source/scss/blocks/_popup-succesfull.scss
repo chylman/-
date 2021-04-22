@@ -1,0 +1,36 @@
+.popup-succesfull {
+  display: none;
+  position: fixed;
+  z-index: 11;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: auto;
+  width: 728px;
+  height: 444px;
+  max-width: 90vw;
+  max-height: 90vh;
+  background-color: #FBF8F8;
+}
+
+.popup-succesfull__massage {
+  @extend %reset-p;
+  margin: auto;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 170%;
+  text-align: center;
+  color: #48494D;
+}
+
+.popup--hidden {
+  display: none;
+}
+

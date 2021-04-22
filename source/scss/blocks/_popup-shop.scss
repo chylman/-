@@ -1,0 +1,119 @@
+.popup-shop {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  width: 728px;
+  height: 444px;
+  margin: auto;
+  background-color: #FBF8F8;
+
+  @media(max-width: $tablet-width-only) {
+    width: 320px;
+    height: 568px;
+    max-height: 90vh;
+    background-color: $white;
+  }
+}
+
+.popup-shop__wrapper {
+  position: relative;
+  display: flex;
+  column-gap: 59px;
+}
+
+.popup-shop__image-wrapper {
+  @media(max-width: $tablet-width-only) {
+    display: none;
+  }
+}
+
+.popup-shop__form {
+  text-align: center
+}
+
+.popup-shop__title {
+  @extend %reset-h2;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 170%;
+  text-align: center;
+  color: $grayLight;
+  margin-top: 72px;
+  margin-bottom: 50px;
+}
+
+.popup-shop__input {
+  box-sizing: border-box;
+  width: 270px;
+  height: 50px;
+  margin-bottom: 20px;
+  padding: 16px 26px;
+}
+
+.popup-shop__input::placeholder {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #48494D;
+}
+
+.popup-shop__button {
+  @extend %reset-button;
+  width: 176px;
+  height: 50px;
+  margin: 0 auto;
+  background-color: $mainAccent;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $white;
+
+
+  &:hover {
+    background-color: $focusAccent;
+  }
+}
+
+.popup-shop__close-button {
+  @extend %reset-button;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 22px;
+  height: 22px;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.popup-shop__close-button::after, .popup-shop__close-button::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 22px;
+  height: 1px;
+  background-color: $overDarkOp20;
+
+}
+
+.popup-shop__close-button::after {
+  transform: rotate(45deg);
+}
+
+.popup-shop__close-button::before {
+  transform: rotate(-45deg);
+}

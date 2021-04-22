@@ -1,0 +1,16 @@
+.detail__wrapper {
+  position: relative;
+  box-sizing: border-box;
+  max-width: 1210px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (max-width: $mobile-width-only) {
+    padding: 0 16px;
+  }
+
+  @media (min-width: $tablet-width)
+  and (max-width: $tablet-width-only) {
+    padding: 0 21px;
+  }
+}
