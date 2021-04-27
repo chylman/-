@@ -233,40 +233,44 @@ display: block;
 }
 
 .description-card__img-wrapper {
-  min-width: 430px;
-  min-height: 596px;
   background-color: $background-img;
+  width: 430px;
+  height: 596px;
+
   @media (max-width: $mobile-width-only) {
-    min-width: initial;
-    min-height: initial;
-    width: 100%;
-    max-height: 415px;
+    position: relative;
+    margin-left: -16px;
+    width: initial;
+    height: initial;
   }
 
   @media (min-width: $tablet-width)
   and (max-width: $tablet-width-only) {
-    width: 100%;
-    height: 415px;
-    min-height: initial;
+    position: relative;
+    margin-left: -20px;
+    width: initial;
+    height: initial;
   }
 }
 
 .description-card__img {
   display: block;
+  object-fit: cover;
+  object-position: center;
 
   @media (max-width: $mobile-width-only) {
-    position: relative;
-    left: -16px;
-    width: calc(100% + 32px);
-    height: 100%;
+    width: calc(100vw - 17px);
     max-height: 415px;
+    object-fit: cover;
+    object-position: center;
   }
 
   @media (min-width: $tablet-width)
   and (max-width: $tablet-width-only) {
-    width: 100%;
-    height: auto;
-    min-height: 415px;
+    width: calc(100vw - 17px);
+    max-height: 415px;
+    object-fit: cover;
+    object-position: center;
   }
 }
 

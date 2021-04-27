@@ -164,6 +164,7 @@ exports.default = gulp.series (
     styles,
     html,
     scripts,
+    images,
     sprite,
     createWebp,
     copy

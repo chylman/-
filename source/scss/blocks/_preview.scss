@@ -1,7 +1,7 @@
 .preview {
   min-height: 860px;
   background-image: url('/image/houseonthemountain.jpg');
-  background-size: 100% auto;
+  background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: top;
 
@@ -12,6 +12,7 @@
 
   @media (min-width: $tablet-width)
     and (max-width: $tablet-width-only) {
+      background-size: 100%;
       min-height: 344px;
       background-image: url('/image/main-background-tablet.jpg');
   }
